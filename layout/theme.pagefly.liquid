@@ -5,6 +5,7 @@ If you plan to remove PageFly, please see the guide in our help center first: ht
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
+ {%- render 'layouthub_header' -%}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -115,7 +116,9 @@ If you plan to remove PageFly, please see the guide in our help center first: ht
     {%- endunless -%}
 
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
-  </head>
+   
+{% include 'pagefly-header' %}
+ </head> 
 
   <body><div class="pagefly-container">{{ content_for_layout }}</div></body>
 </html>
